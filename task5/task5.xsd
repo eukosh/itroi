@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="time">
+    <xs:restriction base="xs:string">
+      <xs:length value="4"/>
+      <xs:pattern value="[0-9] [ap](m)"/>
+    </xs:restriction>
+
+  </xs:simpleType>
+  <xs:element name="letter" type="letterType"/>
+  <xs:complexType name="letterType" mixed="true">
+    <xs:sequence>
+      <xs:element type="xs:string" name="to"/>
+      <xs:element type="xs:string" name="productName"/>
+      <xs:element type="xs:int" name="amount"/>
+      <xs:element type="xs:string" name="unit"/>
+      <xs:element type="time" name="deliveryTime"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

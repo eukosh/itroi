@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="book" type="bookType"/>
+  <xs:complexType name="bookType" mixed="true">
+    <xs:sequence>
+      <xs:element type="xs:string" name="title"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="person" type="personType"/>
+  <xs:complexType name="personType" mixed="true">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
